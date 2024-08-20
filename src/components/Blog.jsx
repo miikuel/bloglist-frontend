@@ -29,13 +29,13 @@ const Blog = ({ blog, addLike, deleteBlog }) => {
   }
   return (
     <div style={blogStyle}>
-      {blog.title} {blog.author}<button onClick={changeLabel}>{buttonLabel}</button>
+      <span>{blog.title} {blog.author}</span><button onClick={changeLabel}>{buttonLabel}</button>
       <br/>
-      {blog.url}
+      <span>{blog.url}</span>
       <br/>
-      likes {blog.likes} <button onClick={(e) => addLike(e, blog)}>like</button>
+      <span>likes {blog.likes}</span><button onClick={(e) => addLike(e, blog)}>like</button>
       <br/>
-      {blog.user.name}
+      <span>{blog.user.name}</span>
       <br/>
       <button onClick={e => deleteBlog(e, blog)}>remove</button>
     </div>
